@@ -1261,7 +1261,7 @@ function MacUI:Window(config)
         Size = UDim2.new(0, SidebarWidth, 1, 0),
         Position = UDim2.new(0, 0, 0, 0),
         BackgroundColor3 = currentTheme.Sidebar,
-        BackgroundTransparency = 0.25,
+        BackgroundTransparency = 0,
         BorderSizePixel = 0,
         ZIndex = 5
     })
@@ -1273,7 +1273,7 @@ function MacUI:Window(config)
         Size = UDim2.new(0, 14, 1, 0),
         Position = UDim2.new(1, -14, 0, 0),
         BackgroundColor3 = currentTheme.Sidebar,
-        BackgroundTransparency = 0.25,
+        BackgroundTransparency = 0,
         BorderSizePixel = 0
     })
     
@@ -1282,7 +1282,7 @@ function MacUI:Window(config)
         Size = UDim2.new(0, 14, 0, 14),
         Position = UDim2.new(1, -14, 0, 0),
         BackgroundColor3 = currentTheme.TitleBarLeft,
-        BackgroundTransparency = 0.25,
+        BackgroundTransparency = 0,
         BorderSizePixel = 0
     })
 

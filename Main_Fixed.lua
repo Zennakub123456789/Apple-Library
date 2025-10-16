@@ -1460,7 +1460,8 @@ function MacUI:Window(config)
         local Button = create("TextButton", {
             Parent = TabButtons,
             Size = UDim2.new(1, -10, 0, 36),
-            BackgroundColor3 = currentTheme.TabInactive,
+            BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+            BackgroundTransparency = 1,
             BorderSizePixel = 0,
             Text = "",
             TextColor3 = currentTheme.TextInactive,

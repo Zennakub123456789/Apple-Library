@@ -1338,8 +1338,8 @@ function MacUI:Window(config)
     
     local SidebarMaskTop = create("Frame", {
         Parent = Sidebar,
-        Size = UDim2.new(1, 0, 0, 14),
-        Position = UDim2.new(0, 0, 0, 0),
+        Size = UDim2.new(0, 14, 0, 14),
+        Position = UDim2.new(1, -14, 0, 0),
         BackgroundColor3 = currentTheme.Sidebar,
         BorderSizePixel = 0
     })
@@ -1351,7 +1351,8 @@ function MacUI:Window(config)
         BackgroundTransparency = 1,
         BorderSizePixel = 0,
         ScrollBarThickness = 4,
-        ScrollBarImageColor3 = Color3.fromRGB(180, 180, 185)
+        ScrollBarImageColor3 = Color3.fromRGB(180, 180, 185),
+        ZIndex = 6
     })
     
     create("UIListLayout", {
@@ -1480,7 +1481,7 @@ function MacUI:Window(config)
             Font = Enum.Font.GothamMedium,
             TextSize = 13,
             AutoButtonColor = false,
-            ZIndex = 3
+            ZIndex = 7
         })
         create("UICorner", { Parent = Button, CornerRadius = UDim.new(0, 8) })
         
@@ -1513,7 +1514,7 @@ function MacUI:Window(config)
                 BackgroundTransparency = 1,
                 Image = tabIconUrl,
                 ImageColor3 = currentTheme.TextInactive,
-                ZIndex = 10
+                ZIndex = 8
             })
             
             local TabLabel = create("TextLabel", {
@@ -1526,7 +1527,7 @@ function MacUI:Window(config)
                 Font = Enum.Font.GothamMedium,
                 TextSize = 13,
                 TextXAlignment = Enum.TextXAlignment.Left,
-                ZIndex = 10
+                ZIndex = 8
             })
             
             tab.Icon = TabIcon

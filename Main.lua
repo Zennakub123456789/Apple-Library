@@ -764,7 +764,6 @@ function MacUI:Window(config)
         Parent = ScreenGui,
         Size = config.Size or UDim2.new(0, 600, 0, 400),
         BackgroundColor3 = currentTheme.Background,
-        BackgroundTransparency = 0,
         BorderSizePixel = 0,
         Position = UDim2.new(0.5, -300, 0.5, -200)
     })

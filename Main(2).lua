@@ -1364,7 +1364,7 @@ function MacUI:Window(config)
     
     create("UIPadding", { 
         Parent = TabButtons, 
-        PaddingTop = UDim.new(0, 8),
+        PaddingTop = UDim.new(0, 45),
         PaddingBottom = UDim.new(0, 8)
     })
 

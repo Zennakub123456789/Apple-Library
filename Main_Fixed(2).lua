@@ -1104,12 +1104,14 @@ function MacUI:Window(config)
                 })
             end)
         elseif i == 2 then
+            local savedSize = config.Size or UDim2.new(0, 600, 0, 400)
             button.MouseButton1Click:Connect(function()
                 isMinimized = not isMinimized
                 if isMinimized then
-                    tween(MainFrame, 0.3, { Size = UDim2.new(0, 600, 0, 32) })
+                    savedSize = MainFrame.Size
+                    tween(MainFrame, 0.3, { Size = UDim2.new(0, MainFrame.Size.X.Offset, 0, 32) })
                 else
-                    tween(MainFrame, 0.3, { Size = config.Size or UDim2.new(0, 600, 0, 400) })
+                    tween(MainFrame, 0.3, { Size = savedSize })
                 end
             end)
         elseif i == 3 then
@@ -1128,7 +1130,7 @@ function MacUI:Window(config)
                 end
             end)
         end
-    end
+        end
 
     local dragging, dragInput, dragStart, startPos
     TitleBar.InputBegan:Connect(function(input)

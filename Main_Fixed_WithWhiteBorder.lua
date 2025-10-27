@@ -421,15 +421,18 @@ local function CreateKeySystem(config, callback)
     
     local KeySubtitle = create("TextLabel", {
         Parent = KeyFrame,
-        Size = UDim2.new(1, -40, 0, 20),
+        Size = UDim2.new(1, -40, 0, 0),
+        AutomaticSize = Enum.AutomaticSize.Y,
         Position = UDim2.new(0, 20, 0, 65),
         BackgroundTransparency = 1,
         Text = keySettings.Subtitle or "Enter your key to continue",
         TextColor3 = Color3.fromRGB(100, 100, 105),
         Font = Enum.Font.Gotham,
         TextSize = 13,
-        TextXAlignment = Enum.TextXAlignment.Left
+        TextXAlignment = Enum.TextXAlignment.Left,
+        TextWrapped = true
     })
+    
     
     local KeyNote = create("TextLabel", {
         Parent = KeyFrame,

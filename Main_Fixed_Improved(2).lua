@@ -2067,7 +2067,7 @@ function MacUI:Window(config)
                 )
             end
             
-            local holderBgColor = darkenColor(self.Theme.Background, 10)
+            local holderBgColor = darkenColor(currentTheme.Background, 10)
             
             local holder = create("Frame", {
                 Parent = TabPage,
@@ -2092,7 +2092,7 @@ function MacUI:Window(config)
                     Position = UDim2.new(0, 0, 0, 0),
                     BackgroundTransparency = 1,
                     Text = cfg.Title,
-                    TextColor3 = self.Theme.TitleText,
+                    TextColor3 = currentTheme.TitleText,
                     Font = Enum.Font.GothamMedium,
                     TextSize = 14,
                     TextXAlignment = Enum.TextXAlignment.Left,

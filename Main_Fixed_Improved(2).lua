@@ -2115,6 +2115,7 @@ function MacUI:Window(config)
                 TextSize = 14,
                 TextXAlignment = Enum.TextXAlignment.Left,
                 ClearTextOnFocus = false
+                ClipsDescendants = true
             })
             create("UICorner", { Parent = inputBox, CornerRadius = UDim.new(0, 6) })
             create("UIStroke", { 
